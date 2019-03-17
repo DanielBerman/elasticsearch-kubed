@@ -48,7 +48,7 @@ def check_cert_presence(cert_dir):
 
 def prompt_for_logstash_certs(context, cert_dir):
     if check_cert_presence(cert_dir):
-        print(f"Using keys and certs for Logstash found in {cert_dir}.")
+        print("Using keys and certs for Logstash found in {cert_dir}.")
         context['skip_logstash'] = False
     else:
         do_logstash = prompt("Would you like to set up Logstash (with SSL beats input)? (Y/n)",
